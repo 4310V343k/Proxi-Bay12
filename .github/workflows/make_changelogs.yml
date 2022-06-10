@@ -14,11 +14,12 @@ jobs:
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
           fetch-depth: 25
-      - name: Setup and cache python and dependencies
+      - name: Setup python and restore cache
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
           cache: 'pip'
+      - name: Install dependencies
         run: pip install ruamel.yaml PyGithub
       - name: Make CL
         id: make-cl
