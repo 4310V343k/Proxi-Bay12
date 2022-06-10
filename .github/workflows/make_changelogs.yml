@@ -31,5 +31,5 @@ jobs:
         run: |
           git config --local user.name "Changelogs"
           git config --local user.email "action@github.com"
-          git commit -m "Automatic changelog generation for PR #${{ env.pr_number }} [ci skip]" -a
+          git commit -am "Automatic changelog generation for PR #${{ env.pr_number }} [ci skip]"
           git push
